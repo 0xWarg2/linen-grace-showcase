@@ -16,6 +16,7 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import "./i18n/config";
+import ContactBubble from "./components/ContactBubble";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => {
                 <Route path="*" element={<NotFound />} />
               </Routes>
               <Footer />
+              <ContactBubble />
             </BrowserRouter>
           </TooltipProvider>
         </LanguageLoadingProvider>

@@ -42,19 +42,62 @@ const Contact = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    console.log("Form values:", values);
-    
-    toast({
-      title: t("contact.form.success"),
-      description: t("contact.form.successDescription"),
-    });
-    
-    form.reset();
-    setIsSubmitting(false);
+    try {
+      const formspreeId = import.meta.env.VITE_FORMSPREE_FORM_ID as string | undefined;
+      if (!formspreeId) {
+        throw new Error("Missing VITE_FORMSPREE_FORM_ID env");
+      }
+      // Normalize: allow full URL or raw ID
+      const normalizedId = (() => {
+        try {
+          if (formspreeId.includes("/")) {
+            const parts = formspreeId.split("/").filter(Boolean);
+            return parts[parts.length - 1];
+          }
+          return formspreeId;
+        } catch {
+          return formspreeId;
+        }
+      })();
+
+      const response = await fetch(`https://formspree.io/f/${normalizedId}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: values.name,
+            email: values.email,
+            company: values.company,
+            message: values.message,
+            _subject: `New contact from ${values.name}`,
+            _replyto: values.email,
+          }),
+        }
+      );
+
+      const data = await response.json().catch(() => ({} as any));
+
+      if (!response.ok) {
+        throw new Error((data && (data.error || data.message)) || "Failed to send");
+      }
+
+      toast({
+        title: t("contact.form.success"),
+        description: t("contact.form.successDescription"),
+      });
+      form.reset();
+    } catch (error: any) {
+      toast({
+        title: t("contact.form.error") || "Send failed",
+        description: error?.message || t("contact.form.errorDescription"),
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Map Google Maps language from our i18n language
@@ -93,7 +136,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-28 pb-20">
+    <div className="min-h-screen pt-28 pb-16">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
@@ -105,15 +148,15 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="shadow-soft animate-fade-in">
-            <CardContent className="p-8">
+            <CardContent className="p-6 md:p-8">
               <h2 className="text-2xl font-serif font-bold mb-6">
                 {t("contact.form.title")}
               </h2>
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
                   <FormField
                     control={form.control}
                     name="name"
@@ -180,7 +223,7 @@ const Contact = () => {
 
                   <Button
                     type="submit"
-                    className="w-full"
+                    className="w-full mt-2 md:mt-4"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

@@ -232,5 +232,12 @@
     "description": "찾고 계신 페이지가 존재하지 않거나 이동되었습니다.",
     "backHome": "홈으로 돌아가기"
   },
-  "brand": "Luxe Threads"
+  "brand": "Luxe Threads",
+  "contactBubble": {
+    "title": "문의해 주세요",
+    "callNow": "지금 전화: {{phone}}",
+    "chatZalo": "Zalo로 채팅",
+    "subscribe": "정보 구독",
+    "sendMessage": "메시지 보내기"
+  }
 }

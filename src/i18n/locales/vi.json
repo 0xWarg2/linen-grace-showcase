@@ -232,5 +232,12 @@
     "description": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển.",
     "backHome": "Về trang chủ"
   },
-  "brand": "Luxe Threads"
+  "brand": "Luxe Threads",
+  "contactBubble": {
+    "title": "Liên hệ với chúng tôi",
+    "callNow": "Gọi ngay: {{phone}}",
+    "chatZalo": "Chat qua Zalo",
+    "subscribe": "Đăng ký thông tin",
+    "sendMessage": "Gửi lời nhắn"
+  }
 }

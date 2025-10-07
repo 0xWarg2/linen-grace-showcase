@@ -232,5 +232,12 @@
     "description": "お探しのページは存在しないか、移動された可能性があります。",
     "backHome": "ホームに戻る"
   },
-  "brand": "Luxe Threads"
+  "brand": "Luxe Threads",
+  "contactBubble": {
+    "title": "お問い合わせ",
+    "callNow": "今すぐお電話: {{phone}}",
+    "chatZalo": "Zaloでチャット",
+    "subscribe": "情報登録",
+    "sendMessage": "メッセージを送る"
+  }
 }

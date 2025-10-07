@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface LanguageContextType {
@@ -25,13 +25,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const { i18n } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
-  const availableLanguages = [
+  const availableLanguages = useMemo(() => ([
     { code: 'en', name: 'English', flag: '🇺🇸' }, // Default language
     { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' },
     { code: 'zh', name: '中文', flag: '🇨🇳' },
     { code: 'ko', name: '한국어', flag: '🇰🇷' },
     { code: 'ja', name: '日本語', flag: '🇯🇵' },
-  ];
+  ]), []);
 
   const changeLanguage = (language: string) => {
     i18n.changeLanguage(language);
@@ -45,11 +45,15 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     const defaultLanguage = 'en';
     
     if (savedLanguage && availableLanguages.some(lang => lang.code === savedLanguage)) {
-      i18n.changeLanguage(savedLanguage);
+      if (i18n.language !== savedLanguage) {
+        i18n.changeLanguage(savedLanguage);
+      }
       setCurrentLanguage(savedLanguage);
     } else {
       // Set default to English if no saved preference or invalid language
-      i18n.changeLanguage(defaultLanguage);
+      if (i18n.language !== defaultLanguage) {
+        i18n.changeLanguage(defaultLanguage);
+      }
       setCurrentLanguage(defaultLanguage);
       localStorage.setItem('preferred-language', defaultLanguage);
     }
@@ -64,7 +68,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     return () => {
       i18n.off('languageChanged', handleLanguageChange);
     };
-  }, [i18n, availableLanguages]);
+  }, [i18n]);
 
   const value: LanguageContextType = {
     currentLanguage,
