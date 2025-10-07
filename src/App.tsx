@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/linen-grace-showcase">
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
