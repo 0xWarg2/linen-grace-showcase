@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -25,6 +26,7 @@ const formSchema = z.object({
 });
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -47,8 +49,8 @@ const Contact = () => {
     console.log("Form values:", values);
     
     toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
+      title: t("contact.form.success"),
+      description: t("contact.form.successDescription"),
     });
     
     form.reset();
@@ -58,19 +60,19 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
-      title: "Email",
+      title: t("contact.info.email"),
       content: "info@luxethreads.com",
       link: "mailto:info@luxethreads.com",
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Phone",
+      title: t("contact.info.phone"),
       content: "+1 (555) 123-4567",
       link: "tel:+15551234567",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: "Address",
+      title: t("contact.info.address"),
       content: "123 Textile Lane, New York, NY 10001",
       link: "https://maps.google.com",
     },
@@ -82,11 +84,10 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
-            Get in Touch
+            {t("contact.title")}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have questions about our products or interested in partnering with us?
-            We'd love to hear from you.
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -95,7 +96,7 @@ const Contact = () => {
           <Card className="shadow-soft animate-fade-in">
             <CardContent className="p-8">
               <h2 className="text-2xl font-serif font-bold mb-6">
-                Send us a message
+                {t("contact.form.title")}
               </h2>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -104,9 +105,9 @@ const Contact = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name *</FormLabel>
+                        <FormLabel>{t("contact.form.name")} *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your name" {...field} />
+                          <Input placeholder={t("contact.form.name")} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -118,7 +119,7 @@ const Contact = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email *</FormLabel>
+                        <FormLabel>{t("contact.form.email")} *</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
@@ -136,9 +137,9 @@ const Contact = () => {
                     name="company"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Company (Optional)</FormLabel>
+                        <FormLabel>{t("contact.form.companyOptional")}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your company" {...field} />
+                          <Input placeholder={t("contact.form.company")} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -150,10 +151,10 @@ const Contact = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message *</FormLabel>
+                        <FormLabel>{t("contact.form.message")} *</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Tell us about your inquiry..."
+                            placeholder={t("contact.form.messagePlaceholder")}
                             className="min-h-[150px]"
                             {...field}
                           />
@@ -169,10 +170,10 @@ const Contact = () => {
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                      "Sending..."
+                      t("contact.form.sending")
                     ) : (
                       <>
-                        Send Message
+                        {t("contact.form.send")}
                         <Send className="ml-2 w-4 h-4" />
                       </>
                     )}
@@ -218,8 +219,7 @@ const Contact = () => {
                   <div className="text-center p-6">
                     <MapPin className="w-12 h-12 mx-auto mb-4 text-accent" />
                     <p className="text-muted-foreground">
-                      Google Maps integration<br />
-                      coming soon
+                      {t("contact.mapPlaceholder")}
                     </p>
                   </div>
                 </div>
@@ -230,10 +230,10 @@ const Contact = () => {
             <Card className="bg-muted/30 shadow-soft">
               <CardContent className="p-8">
                 <h3 className="text-xl font-serif font-bold mb-4">
-                  Our Partners
+                  {t("contact.partners.title")}
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Trusted by leading hotels, resorts, and spas worldwide:
+                  {t("contact.partners.description")}
                 </p>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p>• Four Seasons Hotels & Resorts</p>

@@ -227,5 +227,10 @@
     "contactTitle": "Contact",
     "copyright": "© {{year}} Luxe Threads. All rights reserved."
   },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Return to Home"
+  },
   "brand": "Luxe Threads"
 }

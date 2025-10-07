@@ -227,5 +227,10 @@
     "contactTitle": "お問い合わせ",
     "copyright": "© {{year}} Luxe Threads. All rights reserved."
   },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "description": "お探しのページは存在しないか、移動された可能性があります。",
+    "backHome": "ホームに戻る"
+  },
   "brand": "Luxe Threads"
 }

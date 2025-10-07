@@ -1,7 +1,11 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 const NotFound = () => {
+  const { t } = useTranslation();
   const location = useLocation();
 
   useEffect(() => {
@@ -9,13 +13,24 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 underline hover:text-blue-700">
-          Return to Home
-        </a>
+    <div className="min-h-screen pt-28 pb-20 flex items-center justify-center">
+      <div className="container mx-auto px-4">
+        <Card className="max-w-md mx-auto shadow-soft">
+          <CardContent className="p-8 text-center">
+            <div className="text-6xl font-bold text-primary mb-4">404</div>
+            <h1 className="text-2xl font-serif font-bold mb-4">
+              {t("notFound.title")}
+            </h1>
+            <p className="text-muted-foreground mb-6">
+              {t("notFound.description")}
+            </p>
+            <Link to="/">
+              <Button className="w-full">
+                {t("notFound.backHome")}
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

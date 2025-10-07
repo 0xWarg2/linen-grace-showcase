@@ -227,5 +227,10 @@
     "contactTitle": "Liên hệ",
     "copyright": "© {{year}} Luxe Threads. Đã đăng ký bản quyền."
   },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển.",
+    "backHome": "Về trang chủ"
+  },
   "brand": "Luxe Threads"
 }

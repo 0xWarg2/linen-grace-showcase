@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 import bathTowels from "@/assets/bath-towels.jpg";
 import faceTowels from "@/assets/face-towels.jpg";
 import hotelSpa from "@/assets/hotel-spa.jpg";
@@ -8,38 +9,39 @@ import heroImage from "@/assets/hero-towels.jpg";
 import sustainabilityImage from "@/assets/sustainability.jpg";
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
     {
       src: heroImage,
       title: "Luxury Bath Experience",
-      category: "Bath Towels",
+      category: t("gallery.categories.bath"),
     },
     {
       src: bathTowels,
       title: "Premium Collection",
-      category: "Bath Towels",
+      category: t("gallery.categories.bath"),
     },
     {
       src: faceTowels,
       title: "Face & Hand Towels",
-      category: "Face Towels",
+      category: t("gallery.categories.face"),
     },
     {
       src: hotelSpa,
       title: "Hotel & Spa Collection",
-      category: "Professional",
+      category: t("gallery.categories.professional"),
     },
     {
       src: giftTowels,
       title: "Gift Sets",
-      category: "Gifts",
+      category: t("gallery.categories.gifts"),
     },
     {
       src: sustainabilityImage,
       title: "Sustainable Production",
-      category: "Behind the Scenes",
+      category: t("gallery.categories.behindScenes"),
     },
   ];
 
@@ -49,11 +51,10 @@ const Gallery = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
-            Gallery
+            {t("gallery.title")}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore our collection through stunning imagery that captures the
-            essence of luxury, quality, and craftsmanship.
+            {t("gallery.subtitle")}
           </p>
         </div>
 
@@ -111,16 +112,14 @@ const Gallery = () => {
         <div className="mt-20 max-w-4xl mx-auto animate-fade-in">
           <Card className="p-8 md:p-12 text-center shadow-soft">
             <h2 className="text-3xl font-serif font-bold mb-6">
-              Experience Our Craft
+              {t("gallery.video.title")}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Watch our production process and discover how we transform organic
-              cotton into luxury towels that grace the world's finest hotels and
-              homes.
+              {t("gallery.video.description")}
             </p>
             <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center">
               <p className="text-muted-foreground">
-                Video content coming soon
+                {t("gallery.video.placeholder")}
               </p>
             </div>
           </Card>
