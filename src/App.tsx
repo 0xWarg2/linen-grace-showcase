@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { LanguageLoadingProvider } from "./components/LanguageLoadingProvider";
 import Navigation from "./components/Navigation";
+import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -30,6 +31,7 @@ const App = () => {
             <Toaster />
             <Sonner />
             <BrowserRouter basename={basename}>
+              <ScrollToTop />
               <Navigation />
               <Routes>
                 <Route path="/" element={<Home />} />
