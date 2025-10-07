@@ -9,12 +9,21 @@ const getEnv = (key: string, fallback: string = "") => {
   return v && v.trim().length > 0 ? v : fallback;
 };
 
+const normalizePhoneForTel = (raw: string) => {
+  // Keep leading + and digits only
+  const trimmed = (raw || '').trim();
+  const hasPlus = trimmed.startsWith('+');
+  const digits = trimmed.replace(/[^0-9]/g, '');
+  return hasPlus ? `+${digits}` : digits;
+};
+
 const ContactBubble = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation();
 
   const phone = getEnv("VITE_CONTACT_PHONE", "+84123456789");
+  const telHref = `tel:${normalizePhoneForTel(phone)}`;
   const zaloLink = getEnv("VITE_ZALO_LINK", "https://zalo.me/");
   const subscribeMail = getEnv("VITE_SUBSCRIBE_EMAIL", "info@luxethreads.com");
 
@@ -29,7 +38,7 @@ const ContactBubble = () => {
             </Button>
           </div>
           <div className="grid gap-2">
-            <a href={`tel:${phone}`}>
+            <a href={telHref} aria-label={t("contactBubble.callNow", { phone })}>
               <Button className="w-full justify-start" variant="secondary">
                 <Phone className="w-4 h-4 mr-2" /> {t("contactBubble.callNow", { phone })}
               </Button>
