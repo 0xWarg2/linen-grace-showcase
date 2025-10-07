@@ -15,12 +15,16 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter basename="/linen-grace-showcase">
+const App = () => {
+  // Dynamic basename for GitHub Pages
+  const basename = window.location.hostname === '0xwarg2.github.io' ? '/linen-grace-showcase' : '/';
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter basename={basename}>
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -33,9 +37,10 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
