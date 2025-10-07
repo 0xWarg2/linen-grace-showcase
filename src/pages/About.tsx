@@ -1,25 +1,25 @@
 import { Users, Target, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+  
   const values = [
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Our Mission",
-      description:
-        "To craft premium towels that combine luxury, comfort, and sustainability, enhancing daily rituals for homes and hospitality businesses worldwide.",
+      title: t("about.values.mission.title"),
+      description: t("about.values.mission.description"),
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Our Team",
-      description:
-        "A passionate team of textile experts, designers, and craftspeople dedicated to perfecting every thread with decades of combined experience.",
+      title: t("about.values.team.title"),
+      description: t("about.values.team.description"),
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "Our Values",
-      description:
-        "Quality, sustainability, and customer satisfaction guide everything we do. We believe in creating products that last and practices that protect our planet.",
+      title: t("about.values.heart.title"),
+      description: t("about.values.heart.description"),
     },
   ];
 
@@ -29,11 +29,10 @@ const About = () => {
         {/* Hero Section */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
-            About Luxe Threads
+            {t("about.title")}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            For over two decades, we've been weaving excellence into every towel,
-            combining traditional craftsmanship with modern innovation.
+            {t("about.subtitle")}
           </p>
         </div>
 
@@ -41,27 +40,11 @@ const About = () => {
         <div className="max-w-4xl mx-auto mb-20 animate-fade-in-up">
           <Card className="shadow-soft">
             <CardContent className="p-8 md:p-12">
-              <h2 className="text-3xl font-serif font-bold mb-6">Our Story</h2>
+              <h2 className="text-3xl font-serif font-bold mb-6">{t("about.story.title")}</h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  Founded in 2001, Luxe Threads began with a simple vision: to
-                  create towels that transform ordinary moments into luxurious
-                  experiences. What started as a small family workshop has grown
-                  into a trusted name in premium textiles.
-                </p>
-                <p>
-                  Our journey has been guided by an unwavering commitment to
-                  quality. We source only the finest organic cotton, work with
-                  skilled artisans, and employ sustainable practices at every step
-                  of production. Each towel bears the mark of meticulous attention
-                  to detail.
-                </p>
-                <p>
-                  Today, our towels grace luxury hotels, world-class spas, and
-                  discerning homes across the globe. Yet, despite our growth, we
-                  remain true to our founding principles: exceptional quality,
-                  sustainable practices, and customer satisfaction above all else.
-                </p>
+                <p>{t("about.story.p1")}</p>
+                <p>{t("about.story.p2")}</p>
+                <p>{t("about.story.p3")}</p>
               </div>
             </CardContent>
           </Card>
@@ -70,7 +53,7 @@ const About = () => {
         {/* Values Grid */}
         <div className="mb-20">
           <h2 className="text-4xl font-serif font-bold text-center mb-12 animate-fade-in">
-            What Drives Us
+            {t("about.values.title")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
@@ -98,12 +81,10 @@ const About = () => {
           <Card className="bg-muted/30 shadow-soft">
             <CardContent className="p-8 md:p-12 text-center">
               <h2 className="text-3xl font-serif font-bold mb-6">
-                Trusted by the Best
+                {t("about.partners.title")}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Our towels are the choice of luxury hotels, premium spas, and
-                boutique resorts around the world. We're proud to partner with
-                establishments that share our commitment to excellence.
+                {t("about.partners.description")}
               </p>
               <div className="flex flex-wrap justify-center gap-8 items-center opacity-60">
                 <span className="text-2xl font-serif">Four Seasons</span>

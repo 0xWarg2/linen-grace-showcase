@@ -6,18 +6,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
-
-  const languages = [
-    { code: "en", name: "English" },
-    { code: "vi", name: "Tiếng Việt" },
-    { code: "zh", name: "中文" },
-    { code: "ko", name: "한국어" },
-    { code: "ja", name: "日本語" },
-  ];
+  const { currentLanguage, changeLanguage, availableLanguages } = useLanguage();
 
   return (
     <DropdownMenu>
@@ -27,12 +19,13 @@ const LanguageSwitcher = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {languages.map((lang) => (
+        {availableLanguages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => i18n.changeLanguage(lang.code)}
-            className={i18n.language === lang.code ? "bg-accent" : ""}
+            onClick={() => changeLanguage(lang.code)}
+            className={currentLanguage === lang.code ? "bg-accent" : ""}
           >
+            <span className="mr-2">{lang.flag}</span>
             {lang.name}
           </DropdownMenuItem>
         ))}

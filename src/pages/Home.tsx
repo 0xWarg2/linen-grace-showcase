@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, Award, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-towels.jpg";
 import bathTowels from "@/assets/bath-towels.jpg";
 import faceTowels from "@/assets/face-towels.jpg";
@@ -9,29 +10,31 @@ import hotelSpa from "@/assets/hotel-spa.jpg";
 import giftTowels from "@/assets/gift-towels.jpg";
 
 const Home = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: <Sparkles className="w-6 h-6" />,
-      title: "Premium Quality",
-      description: "Crafted from the finest organic cotton for unmatched softness",
+      title: t("home.features.quality.title"),
+      description: t("home.features.quality.description"),
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Trusted by Hotels",
-      description: "Preferred by luxury resorts and spas worldwide",
+      title: t("home.features.trusted.title"),
+      description: t("home.features.trusted.description"),
     },
     {
       icon: <Leaf className="w-6 h-6" />,
-      title: "Eco-Friendly",
-      description: "Sustainable practices and certified organic materials",
+      title: t("home.features.eco.title"),
+      description: t("home.features.eco.description"),
     },
   ];
 
   const collections = [
-    { name: "Bath Towels", image: bathTowels, path: "/collections" },
-    { name: "Face Towels", image: faceTowels, path: "/collections" },
-    { name: "Hotel & Spa", image: hotelSpa, path: "/collections" },
-    { name: "Gift Sets", image: giftTowels, path: "/collections" },
+    { name: t("home.collections.bath"), image: bathTowels, path: "/collections" },
+    { name: t("home.collections.face"), image: faceTowels, path: "/collections" },
+    { name: t("home.collections.hotel"), image: hotelSpa, path: "/collections" },
+    { name: t("home.collections.gift"), image: giftTowels, path: "/collections" },
   ];
 
   return (
@@ -49,16 +52,16 @@ const Home = () => {
 
         <div className="relative z-10 text-center px-4 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-foreground">
-            Softness & Elegance
+            {t("home.hero.title")}
             <br />
-            <span className="text-gradient">In Every Thread</span>
+            <span className="text-gradient">{t("home.hero.subtitle")}</span>
           </h1>
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-            Premium towels crafted with organic cotton and sustainable practices
+            {t("home.hero.description")}
           </p>
           <Link to="/collections">
             <Button size="lg" className="group">
-              Explore Collections
+              {t("home.hero.cta")}
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-smooth" />
             </Button>
           </Link>
@@ -95,11 +98,10 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-              Our Collections
+              {t("home.collections.title")}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover towels designed for every need, from everyday luxury to
-              professional hospitality
+              {t("home.collections.description")}
             </p>
           </div>
 
@@ -130,7 +132,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link to="/collections">
               <Button variant="outline" size="lg">
-                View All Collections
+                {t("home.collections.viewAll")}
               </Button>
             </Link>
           </div>
@@ -143,15 +145,14 @@ const Home = () => {
           <Card className="bg-gradient-to-r from-secondary to-accent/20 border-none shadow-soft animate-fade-in">
             <CardContent className="py-16 text-center">
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-                Ready to Experience Luxury?
+                {t("home.cta.title")}
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Get in touch to discuss your towel needs or learn more about our
-                products
+                {t("home.cta.description")}
               </p>
               <Link to="/contact">
                 <Button size="lg" variant="default">
-                  Contact Us
+                  {t("home.cta.button")}
                 </Button>
               </Link>
             </CardContent>
