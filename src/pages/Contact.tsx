@@ -26,7 +26,7 @@ const formSchema = z.object({
 });
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -57,6 +57,20 @@ const Contact = () => {
     setIsSubmitting(false);
   };
 
+  // Map Google Maps language from our i18n language
+  const googleMapsLang = (() => {
+    const lang = (i18n.language || "en").toLowerCase();
+    if (lang.startsWith("vi")) return "vi";
+    if (lang.startsWith("zh")) return "zh-CN";
+    if (lang.startsWith("ko")) return "ko";
+    if (lang.startsWith("ja")) return "ja";
+    return "en";
+  })();
+
+  const mapQuery = "Hoan+Kiem+Lake,+Hanoi";
+  const mapLink = `https://www.google.com/maps?q=${mapQuery}&hl=${googleMapsLang}`;
+  const mapEmbedSrc = `https://www.google.com/maps?q=${mapQuery}&hl=${googleMapsLang}&output=embed`;
+
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
@@ -73,8 +87,8 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: t("contact.info.address"),
-      content: "123 Textile Lane, New York, NY 10001",
-      link: "https://maps.google.com",
+      content: "Hồ Hoàn Kiếm, Hoàn Kiếm, Hà Nội, Việt Nam",
+      link: mapLink,
     },
   ];
 
@@ -212,16 +226,19 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Map Placeholder */}
+            {/* Map Embed */}
             <Card className="shadow-soft">
               <CardContent className="p-0">
-                <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <MapPin className="w-12 h-12 mx-auto mb-4 text-accent" />
-                    <p className="text-muted-foreground">
-                      {t("contact.mapPlaceholder")}
-                    </p>
-                  </div>
+                <div className="aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    title="Hồ Hoàn Kiếm, Hà Nội"
+                    src={mapEmbedSrc}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
               </CardContent>
             </Card>
