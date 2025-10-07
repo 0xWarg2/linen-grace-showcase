@@ -1,0 +1,231 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "collections": "Bộ sưu tập",
+    "quality": "Chất lượng",
+    "gallery": "Thư viện",
+    "contact": "Liên hệ"
+  },
+  "home": {
+    "hero": {
+      "title": "Mềm mại & Sang trọng",
+      "subtitle": "Từng sợi chỉ",
+      "description": "Khăn cao cấp được làm từ bông hữu cơ và quy trình bền vững",
+      "cta": "Khám phá bộ sưu tập"
+    },
+    "features": {
+      "quality": {
+        "title": "Chất lượng cao cấp",
+        "description": "Được làm từ bông hữu cơ tốt nhất để mang lại độ mềm mại vượt trội"
+      },
+      "trusted": {
+        "title": "Được khách sạn tin dùng",
+        "description": "Được các resort và spa sang trọng trên toàn thế giới ưa chuộng"
+      },
+      "eco": {
+        "title": "Thân thiện môi trường",
+        "description": "Quy trình bền vững và nguyên liệu hữu cơ được chứng nhận"
+      }
+    },
+    "collections": {
+      "title": "Bộ sưu tập của chúng tôi",
+      "description": "Khám phá các loại khăn được thiết kế cho mọi nhu cầu, từ sang trọng hàng ngày đến khách sạn chuyên nghiệp",
+      "bath": "Khăn tắm",
+      "face": "Khăn mặt",
+      "hotel": "Khách sạn & Spa",
+      "gift": "Bộ quà tặng",
+      "viewAll": "Xem tất cả bộ sưu tập"
+    },
+    "cta": {
+      "title": "Sẵn sàng trải nghiệm sự sang trọng?",
+      "description": "Liên hệ với chúng tôi để thảo luận về nhu cầu khăn của bạn hoặc tìm hiểu thêm về sản phẩm",
+      "button": "Liên hệ chúng tôi"
+    }
+  },
+  "about": {
+    "title": "Về Luxe Threads",
+    "subtitle": "Hơn hai thập kỷ, chúng tôi đã dệt nên sự xuất sắc vào từng chiếc khăn, kết hợp nghệ thuật truyền thống với sự đổi mới hiện đại.",
+    "story": {
+      "title": "Câu chuyện của chúng tôi",
+      "p1": "Được thành lập vào năm 2001, Luxe Threads bắt đầu với một tầm nhìn đơn giản: tạo ra những chiếc khăn biến những khoảnh khắc bình thường thành trải nghiệm sang trọng. Từ một xưởng thủ công gia đình nhỏ đã phát triển thành một thương hiệu vải cao cấp đáng tin cậy.",
+      "p2": "Hành trình của chúng tôi được hướng dẫn bởi cam kết không lay chuyển về chất lượng. Chúng tôi chỉ tìm nguồn bông hữu cơ tốt nhất, làm việc với các nghệ nhân lành nghề và áp dụng các quy trình bền vững ở mọi bước sản xuất. Mỗi chiếc khăn đều mang dấu ấn của sự chú ý tỉ mỉ đến từng chi tiết.",
+      "p3": "Ngày nay, khăn của chúng tôi tô điểm cho các khách sạn sang trọng, spa đẳng cấp thế giới và những ngôi nhà tinh tế trên toàn cầu. Tuy nhiên, bất chấp sự phát triển, chúng tôi vẫn trung thành với các nguyên tắc sáng lập: chất lượng đặc biệt, thực hành bền vững và sự hài lòng của khách hàng trên hết."
+    },
+    "values": {
+      "title": "Điều gì thúc đẩy chúng tôi",
+      "mission": {
+        "title": "Sứ mệnh của chúng tôi",
+        "description": "Tạo ra những chiếc khăn cao cấp kết hợp sang trọng, thoải mái và bền vững, nâng cao nghi lễ hàng ngày cho các gia đình và doanh nghiệp khách sạn trên toàn thế giới."
+      },
+      "team": {
+        "title": "Đội ngũ của chúng tôi",
+        "description": "Một đội ngũ đam mê các chuyên gia vải, nhà thiết kế và thợ thủ công tận tâm hoàn thiện từng sợi chỉ với nhiều thập kỷ kinh nghiệm kết hợp."
+      },
+      "heart": {
+        "title": "Giá trị của chúng tôi",
+        "description": "Chất lượng, tính bền vững và sự hài lòng của khách hàng định hướng mọi việc chúng tôi làm. Chúng tôi tin vào việc tạo ra các sản phẩm bền lâu và các hoạt động bảo vệ hành tinh của chúng ta."
+      }
+    },
+    "partners": {
+      "title": "Được tin cậy bởi những người tốt nhất",
+      "description": "Khăn của chúng tôi là sự lựa chọn của các khách sạn sang trọng, spa cao cấp và resort boutique trên khắp thế giới. Chúng tôi tự hào hợp tác với các cơ sở chia sẻ cam kết về sự xuất sắc của chúng tôi."
+    }
+  },
+  "collections": {
+    "title": "Bộ sưu tập của chúng tôi",
+    "subtitle": "Khám phá dòng khăn cao cấp được tuyển chọn cẩn thận của chúng tôi, mỗi loại được thiết kế với mục đích cụ thể và được chế tác với chất lượng không thỏa hiệp.",
+    "bath": {
+      "name": "Khăn tắm",
+      "description": "Khăn tắm đặc trưng của chúng tôi mang lại khả năng thấm hút đặc biệt và độ mềm mại sang trọng. Làm từ bông hữu cơ sợi dài cao cấp với trọng lượng dày đặc 600 GSM.",
+      "sizes": "27\" x 54\", 30\" x 58\"",
+      "colors": "Trắng, Kem, Be, Xanh sage, Xanh nhạt",
+      "features": [
+        "Bông hữu cơ cao cấp 600 GSM",
+        "Viền khâu đôi",
+        "Khả năng thấm hút đặc biệt",
+        "Màu không phai"
+      ]
+    },
+    "face": {
+      "name": "Khăn mặt",
+      "description": "Nhẹ nhàng trên da nhưng rất hiệu quả, khăn mặt và tay của chúng tôi kết hợp sự thanh lịch với tính thực tế. Hoàn hảo cho việc sử dụng hàng ngày với cấu trúc tinh tế 550 GSM.",
+      "sizes": "13\" x 13\" (mặt), 16\" x 30\" (tay)",
+      "colors": "Trắng, Kem, Xanh sage, Hồng nhạt",
+      "features": [
+        "Bông hữu cơ mềm 550 GSM",
+        "Nhẹ nhàng với da nhạy cảm",
+        "Khô nhanh",
+        "Có sẵn bộ phối hợp"
+      ]
+    },
+    "hotel": {
+      "name": "Bộ sưu tập khách sạn & Spa",
+      "description": "Khăn cấp chuyên nghiệp được thiết kế cho việc sử dụng khối lượng lớn mà không ảnh hưởng đến sự sang trọng. Được các khách sạn và spa đẳng cấp thế giới tin cậy về độ bền và sự thanh lịch.",
+      "sizes": "Nhiều kích cỡ có sẵn",
+      "colors": "Trắng, Kem, Tùy chọn thương hiệu tùy chỉnh",
+      "features": [
+        "Độ bền cấp thương mại",
+        "Chịu được giặt thường xuyên",
+        "Có thể thêu tùy chỉnh",
+        "Giá số lượng lớn cho doanh nghiệp"
+      ]
+    },
+    "gift": {
+      "name": "Bộ khăn quà tặng",
+      "description": "Bộ khăn được đóng gói sang trọng hoàn hảo cho những dịp đặc biệt. Mỗi bộ được trình bày đẹp mắt với ruy băng cao cấp và bao bì sẵn sàng làm quà.",
+      "sizes": "Các bộ được tuyển chọn",
+      "colors": "Bảng màu phối hợp",
+      "features": [
+        "Bao bì quà tặng cao cấp",
+        "Bộ khăn phối hợp",
+        "Hoàn hảo cho đám cưới & sự kiện",
+        "Có thể cá nhân hóa"
+      ]
+    },
+    "sizesLabel": "Kích cỡ có sẵn",
+    "colorsLabel": "Màu sắc",
+    "featuresLabel": "Tính năng"
+  },
+  "quality": {
+    "title": "Chất lượng & Tính bền vững",
+    "subtitle": "Cam kết của chúng tôi về sự xuất sắc vượt xa sản phẩm để bao gồm nguồn cung ứng có đạo đức và trách nhiệm môi trường.",
+    "craft": {
+      "title": "Được chế tác với sự chăm sóc",
+      "p1": "Mỗi chiếc khăn chúng tôi sản xuất là kết quả của sự chú ý tỉ mỉ đến từng chi tiết và sự tôn trọng sâu sắc đối với cả con người và hành tinh. Từ cánh đồng bông đến ngôi nhà của bạn, chúng tôi đảm bảo các hoạt động có đạo đức và trách nhiệm môi trường ở mọi bước.",
+      "p2": "Các cơ sở hiện đại của chúng tôi kết hợp các kỹ thuật dệt truyền thống với công nghệ hiện đại, đảm bảo tính nhất quán trong khi duy trì chất lượng thủ công làm nên sự khác biệt cho khăn của chúng tôi."
+    },
+    "certifications": {
+      "title": "Chứng nhận của chúng tôi",
+      "oeko": {
+        "title": "Chứng nhận OEKO-TEX",
+        "description": "Tất cả vải của chúng tôi đều được chứng nhận OEKO-TEX Standard 100, đảm bảo không có chất độc hại."
+      },
+      "organic": {
+        "title": "Bông hữu cơ",
+        "description": "Chúng tôi sử dụng 100% bông hữu cơ được chứng nhận, trồng không có thuốc trừ sâu hoặc hóa chất có hại."
+      },
+      "eco": {
+        "title": "Nhuộm thân thiện môi trường",
+        "description": "Quy trình nhuộm tác động thấp của chúng tôi sử dụng ít hơn 50% nước và năng lượng so với phương pháp thông thường."
+      },
+      "iso": {
+        "title": "Chứng nhận ISO",
+        "description": "Các cơ sở sản xuất của chúng tôi duy trì chứng nhận quản lý chất lượng ISO 9001."
+      }
+    },
+    "standards": {
+      "title": "Tiêu chuẩn chất lượng không thỏa hiệp",
+      "points": [
+        "Bông hữu cơ sợi dài cho độ mềm mại và độ bền vượt trội",
+        "GSM cao (gram trên mét vuông) để hấp thụ tối đa",
+        "Viền khâu đôi ngăn chặn sờn và kéo dài tuổi thọ sản phẩm",
+        "Thuốc nhuộm không phai màu sau nhiều lần giặt",
+        "Kiểm soát chất lượng nghiêm ngặt ở mọi giai đoạn sản xuất",
+        "Được kiểm tra cho hơn 500 chu kỳ giặt trong khi vẫn duy trì độ mềm mại"
+      ]
+    },
+    "promise": {
+      "title": "Cam kết bền vững của chúng tôi",
+      "intro": "Chúng tôi tin rằng sự sang trọng và tính bền vững có thể cùng tồn tại. Đó là lý do tại sao chúng tôi đã cam kết:",
+      "points": [
+        "Vận chuyển carbon trung tính vào năm 2025",
+        "100% năng lượng tái tạo trong tất cả các cơ sở vào năm 2026",
+        "Quy trình sản xuất không rác thải",
+        "Lương công bằng và điều kiện làm việc an toàn cho tất cả công nhân",
+        "Hỗ trợ cộng đồng nông nghiệp hữu cơ"
+      ],
+      "conclusion": "Khi bạn chọn Luxe Threads, bạn không chỉ chọn chất lượng cao cấp—bạn đang hỗ trợ một tương lai bền vững hơn cho ngành sản xuất vải."
+    }
+  },
+  "gallery": {
+    "title": "Thư viện",
+    "subtitle": "Khám phá bộ sưu tập của chúng tôi qua hình ảnh tuyệt đẹp thể hiện bản chất của sự sang trọng, chất lượng và nghệ thuật.",
+    "video": {
+      "title": "Trải nghiệm nghệ thuật của chúng tôi",
+      "description": "Xem quy trình sản xuất của chúng tôi và khám phá cách chúng tôi biến bông hữu cơ thành khăn sang trọng tô điểm cho các khách sạn và ngôi nhà tốt nhất thế giới.",
+      "placeholder": "Nội dung video sắp ra mắt"
+    },
+    "categories": {
+      "bath": "Khăn tắm",
+      "face": "Khăn mặt",
+      "professional": "Chuyên nghiệp",
+      "gifts": "Quà tặng",
+      "behindScenes": "Hậu trường"
+    }
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Có câu hỏi về sản phẩm của chúng tôi hoặc quan tâm đến việc hợp tác với chúng tôi? Chúng tôi rất muốn nghe từ bạn.",
+    "form": {
+      "title": "Gửi tin nhắn cho chúng tôi",
+      "name": "Tên",
+      "email": "Email",
+      "company": "Công ty",
+      "companyOptional": "Công ty (Tùy chọn)",
+      "message": "Tin nhắn",
+      "messagePlaceholder": "Cho chúng tôi biết về yêu cầu của bạn...",
+      "send": "Gửi tin nhắn",
+      "sending": "Đang gửi...",
+      "success": "Đã gửi tin nhắn!",
+      "successDescription": "Chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Điện thoại",
+      "address": "Địa chỉ"
+    },
+    "partners": {
+      "title": "Đối tác của chúng tôi",
+      "description": "Được tin cậy bởi các khách sạn, resort và spa hàng đầu trên toàn thế giới:"
+    },
+    "mapPlaceholder": "Tích hợp Google Maps\nsắp ra mắt"
+  },
+  "footer": {
+    "description": "Chế tác khăn cao cấp với sự thanh lịch và bền vững trong lòng.",
+    "quickLinks": "Liên kết nhanh",
+    "contactTitle": "Liên hệ",
+    "copyright": "© {{year}} Luxe Threads. Đã đăng ký bản quyền."
+  },
+  "brand": "Luxe Threads"
+}

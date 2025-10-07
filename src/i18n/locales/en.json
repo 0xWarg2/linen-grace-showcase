@@ -1,0 +1,231 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "collections": "Collections",
+    "quality": "Quality",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Softness & Elegance",
+      "subtitle": "In Every Thread",
+      "description": "Premium towels crafted with organic cotton and sustainable practices",
+      "cta": "Explore Collections"
+    },
+    "features": {
+      "quality": {
+        "title": "Premium Quality",
+        "description": "Crafted from the finest organic cotton for unmatched softness"
+      },
+      "trusted": {
+        "title": "Trusted by Hotels",
+        "description": "Preferred by luxury resorts and spas worldwide"
+      },
+      "eco": {
+        "title": "Eco-Friendly",
+        "description": "Sustainable practices and certified organic materials"
+      }
+    },
+    "collections": {
+      "title": "Our Collections",
+      "description": "Discover towels designed for every need, from everyday luxury to professional hospitality",
+      "bath": "Bath Towels",
+      "face": "Face Towels",
+      "hotel": "Hotel & Spa",
+      "gift": "Gift Sets",
+      "viewAll": "View All Collections"
+    },
+    "cta": {
+      "title": "Ready to Experience Luxury?",
+      "description": "Get in touch to discuss your towel needs or learn more about our products",
+      "button": "Contact Us"
+    }
+  },
+  "about": {
+    "title": "About Luxe Threads",
+    "subtitle": "For over two decades, we've been weaving excellence into every towel, combining traditional craftsmanship with modern innovation.",
+    "story": {
+      "title": "Our Story",
+      "p1": "Founded in 2001, Luxe Threads began with a simple vision: to create towels that transform ordinary moments into luxurious experiences. What started as a small family workshop has grown into a trusted name in premium textiles.",
+      "p2": "Our journey has been guided by an unwavering commitment to quality. We source only the finest organic cotton, work with skilled artisans, and employ sustainable practices at every step of production. Each towel bears the mark of meticulous attention to detail.",
+      "p3": "Today, our towels grace luxury hotels, world-class spas, and discerning homes across the globe. Yet, despite our growth, we remain true to our founding principles: exceptional quality, sustainable practices, and customer satisfaction above all else."
+    },
+    "values": {
+      "title": "What Drives Us",
+      "mission": {
+        "title": "Our Mission",
+        "description": "To craft premium towels that combine luxury, comfort, and sustainability, enhancing daily rituals for homes and hospitality businesses worldwide."
+      },
+      "team": {
+        "title": "Our Team",
+        "description": "A passionate team of textile experts, designers, and craftspeople dedicated to perfecting every thread with decades of combined experience."
+      },
+      "heart": {
+        "title": "Our Values",
+        "description": "Quality, sustainability, and customer satisfaction guide everything we do. We believe in creating products that last and practices that protect our planet."
+      }
+    },
+    "partners": {
+      "title": "Trusted by the Best",
+      "description": "Our towels are the choice of luxury hotels, premium spas, and boutique resorts around the world. We're proud to partner with establishments that share our commitment to excellence."
+    }
+  },
+  "collections": {
+    "title": "Our Collections",
+    "subtitle": "Explore our carefully curated range of premium towels, each designed with a specific purpose and crafted with uncompromising quality.",
+    "bath": {
+      "name": "Bath Towels",
+      "description": "Our signature bath towels offer exceptional absorbency and luxurious softness. Made from premium long-staple organic cotton with a dense 600 GSM weight.",
+      "sizes": "27\" x 54\", 30\" x 58\"",
+      "colors": "White, Cream, Beige, Sage Green, Soft Blue",
+      "features": [
+        "600 GSM premium organic cotton",
+        "Double-stitched hems",
+        "Exceptional absorbency",
+        "Fade-resistant dyes"
+      ]
+    },
+    "face": {
+      "name": "Face Towels",
+      "description": "Gentle on skin yet highly effective, our face and hand towels combine elegance with practicality. Perfect for daily use with a refined 550 GSM construction.",
+      "sizes": "13\" x 13\" (face), 16\" x 30\" (hand)",
+      "colors": "White, Cream, Sage Green, Soft Pink",
+      "features": [
+        "550 GSM soft organic cotton",
+        "Gentle on sensitive skin",
+        "Quick-drying",
+        "Coordinating sets available"
+      ]
+    },
+    "hotel": {
+      "name": "Hotel & Spa Collection",
+      "description": "Professional-grade towels designed for high-volume use without compromising luxury. Trusted by world-class hotels and spas for durability and elegance.",
+      "sizes": "Multiple sizes available",
+      "colors": "White, Cream, Custom branding options",
+      "features": [
+        "Commercial-grade durability",
+        "Withstands frequent laundering",
+        "Custom embroidery available",
+        "Bulk pricing for businesses"
+      ]
+    },
+    "gift": {
+      "name": "Gift Towel Sets",
+      "description": "Elegantly packaged towel sets perfect for special occasions. Each set is beautifully presented with premium ribbons and gift-ready packaging.",
+      "sizes": "Curated assortments",
+      "colors": "Coordinated color palettes",
+      "features": [
+        "Premium gift packaging",
+        "Coordinated towel sets",
+        "Perfect for weddings & events",
+        "Personalization available"
+      ]
+    },
+    "sizesLabel": "Sizes Available",
+    "colorsLabel": "Colors",
+    "featuresLabel": "Features"
+  },
+  "quality": {
+    "title": "Quality & Sustainability",
+    "subtitle": "Our commitment to excellence extends beyond the product to encompass ethical sourcing and environmental responsibility.",
+    "craft": {
+      "title": "Crafted with Care",
+      "p1": "Every towel we produce is the result of meticulous attention to detail and a deep respect for both people and planet. From the cotton fields to your home, we ensure ethical practices and environmental responsibility at every step.",
+      "p2": "Our state-of-the-art facilities combine traditional weaving techniques with modern technology, ensuring consistency while maintaining the artisanal quality that sets our towels apart."
+    },
+    "certifications": {
+      "title": "Our Certifications",
+      "oeko": {
+        "title": "OEKO-TEX Certified",
+        "description": "All our textiles are OEKO-TEX Standard 100 certified, ensuring they're free from harmful substances."
+      },
+      "organic": {
+        "title": "Organic Cotton",
+        "description": "We use 100% certified organic cotton, grown without pesticides or harmful chemicals."
+      },
+      "eco": {
+        "title": "Eco-Friendly Dyeing",
+        "description": "Our low-impact dyeing process uses 50% less water and energy than conventional methods."
+      },
+      "iso": {
+        "title": "ISO Certified",
+        "description": "Our manufacturing facilities maintain ISO 9001 quality management certification."
+      }
+    },
+    "standards": {
+      "title": "Uncompromising Quality Standards",
+      "points": [
+        "Long-staple organic cotton for superior softness and durability",
+        "High GSM (grams per square meter) for maximum absorbency",
+        "Double-stitched hems prevent fraying and extend product life",
+        "Colorfast dyes that resist fading after repeated washing",
+        "Rigorous quality control at every production stage",
+        "Tested for 500+ wash cycles while maintaining softness"
+      ]
+    },
+    "promise": {
+      "title": "Our Sustainability Promise",
+      "intro": "We believe luxury and sustainability can coexist. That's why we've committed to:",
+      "points": [
+        "Carbon-neutral shipping by 2025",
+        "100% renewable energy in all facilities by 2026",
+        "Zero waste manufacturing processes",
+        "Fair wages and safe working conditions for all workers",
+        "Supporting organic farming communities"
+      ],
+      "conclusion": "When you choose Luxe Threads, you're not just choosing premium quality—you're supporting a more sustainable future for textile manufacturing."
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Explore our collection through stunning imagery that captures the essence of luxury, quality, and craftsmanship.",
+    "video": {
+      "title": "Experience Our Craft",
+      "description": "Watch our production process and discover how we transform organic cotton into luxury towels that grace the world's finest hotels and homes.",
+      "placeholder": "Video content coming soon"
+    },
+    "categories": {
+      "bath": "Bath Towels",
+      "face": "Face Towels",
+      "professional": "Professional",
+      "gifts": "Gifts",
+      "behindScenes": "Behind the Scenes"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions about our products or interested in partnering with us? We'd love to hear from you.",
+    "form": {
+      "title": "Send us a message",
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "companyOptional": "Company (Optional)",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your inquiry...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message Sent!",
+      "successDescription": "We'll get back to you as soon as possible."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    },
+    "partners": {
+      "title": "Our Partners",
+      "description": "Trusted by leading hotels, resorts, and spas worldwide:"
+    },
+    "mapPlaceholder": "Google Maps integration\ncoming soon"
+  },
+  "footer": {
+    "description": "Crafting premium towels with elegance and sustainability at heart.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact",
+    "copyright": "© {{year}} Luxe Threads. All rights reserved."
+  },
+  "brand": "Luxe Threads"
+}
