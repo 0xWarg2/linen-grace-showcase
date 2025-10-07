@@ -26,7 +26,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
   const availableLanguages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'en', name: 'English', flag: '🇺🇸' }, // Default language
     { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' },
     { code: 'zh', name: '中文', flag: '🇨🇳' },
     { code: 'ko', name: '한국어', flag: '🇰🇷' },
@@ -40,11 +40,18 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   };
 
   useEffect(() => {
-    // Load saved language preference
+    // Load saved language preference or default to English
     const savedLanguage = localStorage.getItem('preferred-language');
+    const defaultLanguage = 'en';
+    
     if (savedLanguage && availableLanguages.some(lang => lang.code === savedLanguage)) {
       i18n.changeLanguage(savedLanguage);
       setCurrentLanguage(savedLanguage);
+    } else {
+      // Set default to English if no saved preference or invalid language
+      i18n.changeLanguage(defaultLanguage);
+      setCurrentLanguage(defaultLanguage);
+      localStorage.setItem('preferred-language', defaultLanguage);
     }
 
     // Listen for language changes
@@ -57,7 +64,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     return () => {
       i18n.off('languageChanged', handleLanguageChange);
     };
-  }, [i18n]);
+  }, [i18n, availableLanguages]);
 
   const value: LanguageContextType = {
     currentLanguage,

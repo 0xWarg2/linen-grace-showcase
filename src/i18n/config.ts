@@ -19,7 +19,12 @@ i18n
       ko: { translation: ko },
       ja: { translation: ja },
     },
+    lng: 'en', // Set English as default language
     fallbackLng: 'en',
+    detection: {
+      order: ['localStorage', 'navigator', 'htmlTag'],
+      caches: ['localStorage'],
+    },
     interpolation: {
       escapeValue: false,
     },
